@@ -105,3 +105,22 @@ form button {
 form button:hover {
     background-color: #2980b9;
 }
+.cart-list, .order-summary {
+    padding: 20px;
+}
+
+.cart-item, .order-summary ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-summary, .checkout-form {
+    margin-top: 20px;
+}
+
+.cart-summary button, .checkout-form button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

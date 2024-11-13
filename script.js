@@ -10,10 +10,11 @@ function displayProducts() {
         const productItem = document.createElement('div');
         productItem.classList.add('product-item');
         productItem.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" style="width:100px; height:auto;">
             <h3>${product.name}</h3>
             <p>SKU: ${product.sku}</p>
             <p>Code: ${product.code}</p>
-            <p>$${product.price}</p>
+            <p>P${product.price}</p>
             <button onclick="addToCart(${product.id})">Add to Cart</button>
         `;
         productList.appendChild(productItem);
@@ -43,7 +44,7 @@ function showCart() {
         cart.forEach((item, index) => {
             const cartItem = document.createElement('li');
             cartItem.innerHTML = `
-                ${item.name} - $${item.price} 
+                ${item.name} - P${item.price} 
                 <button onclick="removeFromCart(${index})">Remove</button>
             `;
             cartItemsContainer.appendChild(cartItem);
